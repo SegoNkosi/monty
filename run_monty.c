@@ -117,14 +117,25 @@ void (*get_op_func(char *opcode))(stack_t**, unsigned int)
 	return (NULL);
 }
 
-
 /**
  * run_monty - Primary function to execute a Monty bytecodes script.
+ * rn -  Handle program termination with exit status and script file descriptor
  * @script_fd: File descriptor for an open Monty bytecodes script.
+ * @exit_status: The exit status value
+ *
+ * Description:
+ * This function is responsible for handling the termination of the program,
+ * considering the provided exit status and the file descriptor associated
+ * with a script. It may perform cleanup tasks or other operations based on
+ * the provided parameters.
+ *
+ * Parameters:
+ * - @exit_status: An integer representing the exit status of the program
  *
  * Return: EXIT_SUCCESS on success, respective error code on failure.
  */
-void rn(int exit_status); /*Implementation of rn function*/
+void rn(int exit_status); /*This Implements the rn function*/
+/* ... */
 int run_monty(FILE *script_fd)
 {
 	stack_t *stack = NULL;
