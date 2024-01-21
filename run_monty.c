@@ -124,6 +124,7 @@ void (*get_op_func(char *opcode))(stack_t**, unsigned int)
  *
  * Return: EXIT_SUCCESS on success, respective error code on failure.
  */
+void rn(int exit_status); /*Implementation of rn function*/
 int run_monty(FILE *script_fd)
 {
 	stack_t *stack = NULL;
@@ -185,5 +186,6 @@ int run_monty(FILE *script_fd)
 
 
 	free(line);
-	rn(exit_status);
+	rn(exit_status); /*Implementation of rn function*/
+	return (malloc_error());
 }
