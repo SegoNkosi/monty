@@ -13,7 +13,6 @@
  *
  * Return: (EXIT_SUCCESS) on success (EXIT_FAILURE) on error
  */
-
 char **op_toks = NULL;
 int main(int argc, char *argv[])
 {
